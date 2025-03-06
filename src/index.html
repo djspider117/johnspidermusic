@@ -3,99 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <title>Your Artist Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background-color: #1a1a1a;
-            color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3em;
-            letter-spacing: 5px;
-            margin-bottom: 10px;
-            color: #ffcc00;
-        }
-
-        .sub-text {
-            font-size: 1.5em;
-            margin-bottom: 40px;
-            color: #f0f0f0;
-        }
-
-        .icons {
-            margin-top: 20px;
-        }
-
-        .icons a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #f0f0f0;
-            font-size: 2em;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .icons a:hover {
-            color: #ffcc00;
-            transform: scale(1.1);
-        }
-
-        .icons a:active {
-            transform: scale(0.95);
-        }
-
-        .beatport-icon {
-            font-size: 2em;
-            color: #f0f0f0;
-        }
-
-        .beatport-icon img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s ease;
-        }
-
-        .beatport-icon img:hover {
-            transform: scale(1.1);
-        }
-
-        .beatport-icon img:active {
-            transform: scale(0.95);
-        }
-    </style>
 </head>
 <body>
-    <div>
-        <h1>UNDER CONSTRUCTION</h1>
-        <p class="sub-text">Stay tuned for updates!</p>
-        <div class="icons">
-            <a href="https://www.facebook.com/djjspider" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://soundcloud.com/johnspidermusic" target="_blank">
-                <i class="fab fa-soundcloud"></i>
-            </a>
-            <a href="https://www.beatport.com/artist/john-spider/769557" target="_blank" class="beatport-icon">
-                <img src="https://support.beatport.com/hc/en-us/article_attachments/20473898782484" alt="Beatport">
-            </a>
-            <a href="https://www.youtube.com/@johnspider" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.instagram.com/johnspidermusic/" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
+    <!-- Top Menu -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/Logo-Flat-Small.png" alt="Main Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#gigs">Shows</a></li>
+                <li><a href="#releases">Releases</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="main-section">
+        <div class="video-wrapper">
+            <video autoplay muted loop id="bg-video">
+                <source src="videos/main2.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
         </div>
-    </div>
+        <div class="pattern-layer"></div>
+        <span>
+            <div class="main-logo">
+                <img src="images/Logo-Small-2.png" alt="Main Logo">
+            </div>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-soundcloud"></i></a>
+            </div>
+        </span>
+    </section>
+    
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>About</h2>
+            <div class="about-text">
+                <p>Ionut Popovici a.k.a JOHN SPIDER is a trance DJ and producer hailing from Iasi, Romania. He specializes in emotional vibes and outputs a variety of subgenres from deep/progressive trance to hard-hitting uplifting and psytrance.</p>
+    
+                <p>He started a weekly radio show that he named Spiders in the Mix in 2008 that eventually got featured on Trance.FM that ran for 177 episodes and ended in 2011 due to work commitments. After a long absence from the scene, in 2017 he restarted his old show with a unique style of seamlessly blending deep and progressive vibes with hammering trance sounds.</p>
+    
+                <p>As a producer he has released tracks and remixes under labels such as Alter Ego, Arkham Digital, Boomtic Records, Tuned:Flow, and Vibrate Audio.</p>
+    
+                <p>VOIDLOGIC is the new alias of Ionut Popovici, formerly known for his trance productions under John Spider. Now venturing into the realm of drum and bass, VOIDLOGIC brings a fresh, energetic approach to the genre, blending uplifting melodies with dancefloor-driven beats. His debut track, "Until You See the Sun," is an electrifying fusion of fast-paced rhythms and euphoric vibes, guaranteed to set the stage for his presence in the drum and bass scene.</p>
+    
+                <p>Having made his mark in trance with releases on labels like Alter Ego, Arkham, Boomtic Records, Tuned:FLOW, and Vibrate Audio, Ionut’s new project VOIDLOGIC explores a dynamic soundscape with a focus on high-energy, emotional drum and bass tracks.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gigs Section -->
+    <section id="gigs" class="gigs-section">
+        <h2>Gigs</h2>
+        <div class="gigs-list">
+            <!-- JavaScript will populate this -->
+        </div>
+    </section>
+    
+    <!-- Releases Section -->
+    <section id="releases" class="releases-section">
+        <h2>Releases</h2>
+        <video autoplay muted loop>
+            <source src="videos/main.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="coverflow-container">
+            <button class="nav-button left-button">&larr;</button>
+            <div class="coverflow-gallery">
+                <!-- Gallery items will be dynamically inserted here -->
+            </div>
+            <button class="nav-button right-button">&rarr;</button>
+        </div>
+    </section>
+
+    <section id="video" class="video-section">
+        <h2><a href="https://www.youtube.com/watch?v=3h3evgm1RXs">Watch My Latest Video</a></h2>
+        <video autoplay muted loop>
+            <source src="videos/mirage-montage.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <button id="back-to-top" class="back-to-top" onclick="topFunction()">↑</button>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-soundcloud"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 John Spider. All Rights Reserved.
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
