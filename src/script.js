@@ -16,76 +16,75 @@ function topFunction() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const coverflowGallery = document.querySelector('.coverflow-gallery');
-    const leftButton = document.querySelector('.left-button');
-    const rightButton = document.querySelector('.right-button');
+  const coverList = document.querySelector('.cover-list');
+  const activeReleaseImage = document.querySelector('.release-image img');
+  const activeReleaseTitle = document.querySelector('.release-title');
+  const activeReleaseSubtitle = document.querySelector('.release-subtitle');
+  const activeReleaseText = document.querySelector('.release-text');
+  const activeReleaseDate = document.querySelector('.release-date');
+  const activeReleaseLabel = document.querySelector('.release-label');
+  const activeReleaseLink = document.querySelector('.release-link');
 
-    let currentIndex = 2; // Start with the center item (index 2)
+  // Sort releases by date (newest first)
+  releasesJson.sort((a, b) => new Date(b.DateReleased) - new Date(a.DateReleased));
 
-    // Generate the coverflow gallery
-    generateCoverflowGallery(releasesJson);
+  // Generate the cover list
+  generateCoverList(releasesJson);
 
-    // Add event listeners for navigation buttons
-    leftButton.addEventListener('click', () => navigate(-1));
-    rightButton.addEventListener('click', () => navigate(1));
+  // Set the latest release as active by default
+  setActiveRelease(releasesJson[0]);
 
-    function generateCoverflowGallery(releases) {
-        coverflowGallery.innerHTML = ''; // Clear existing content
+  function generateCoverList(releases) {
+      coverList.innerHTML = ''; // Clear existing content
 
-        // Calculate the range of items to display
-        const start = Math.max(currentIndex - 2, 0);
-        const end = Math.min(currentIndex + 3, releases.length);
+      releases.forEach((release, index) => {
+          const cover = document.createElement('img');
+          cover.src = release.Image;
+          cover.alt = release.Title;
+          cover.title = release.Title;
 
-        for (let i = start; i < end; i++) {
-            const release = releases[i];
-            const galleryItem = document.createElement('div');
-            galleryItem.classList.add('gallery-item');
+          // Add click event to set the active release
+          cover.addEventListener('click', () => {
+              setActiveRelease(release);
+              updateActiveCover(cover);
+          });
 
-            // Apply classes based on position
-            if (i === currentIndex) {
-                galleryItem.classList.add('center');
-            } else if (i === currentIndex - 1) {
-                galleryItem.classList.add('left');
-            } else if (i === currentIndex + 1) {
-                galleryItem.classList.add('right');
-            } else if (i < currentIndex - 1) {
-                galleryItem.classList.add('far-left');
-            } else if (i > currentIndex + 1) {
-                galleryItem.classList.add('far-right');
-            }
+          // Highlight the first cover by default
+          if (index === 0) {
+              cover.classList.add('active');
+          }
 
-            const image = document.createElement('img');
-            image.src = release.Image;
-            image.alt = release.Title;
-            image.title = `${release.Title}\n${release.Subtitle}\n${release.Label}`;
+          coverList.appendChild(cover);
+      });
+  }
 
-            galleryItem.addEventListener('click', () => {
-                window.open(release.MainLink, '_blank');
-            });
+  function setActiveRelease(release) {
+      activeReleaseImage.src = release.Image;
+      activeReleaseImage.alt = release.Title;
+      activeReleaseTitle.textContent = release.Title;
+      activeReleaseSubtitle.textContent = release.Subtitle;
+      activeReleaseText.textContent = release.ItemPageText;
+      activeReleaseDate.textContent = `Released: ${release.DateReleased}`;
+      activeReleaseLabel.textContent = `Label: ${release.Label}`;
+      activeReleaseLink.href = release.MainLink;
+  }
 
-            galleryItem.appendChild(image);
-            coverflowGallery.appendChild(galleryItem);
-        }
-    }
+  function updateActiveCover(selectedCover) {
+      // Remove active class from all covers
+      document.querySelectorAll('.cover-list img').forEach(cover => {
+          cover.classList.remove('active');
+      });
 
-    function navigate(direction) {
-        currentIndex += direction;
-
-        // Ensure the index stays within bounds
-        if (currentIndex < 2) currentIndex = 2; // Prevent going too far left
-        if (currentIndex >= releasesJson.length - 2) currentIndex = releasesJson.length - 3; // Prevent going too far right
-
-        // Update the gallery
-        generateCoverflowGallery(releasesJson);
-    }
+      // Add active class to the selected cover
+      selectedCover.classList.add('active');
+  }
 });
-
 
 // Gigs Data
 const gigs = [
-    { date: '2023-10-15', venue: 'Venue 1', ticketLink: 'https://tickets.com/gig1' },
-    { date: '2023-11-20', venue: 'Venue 2', ticketLink: 'https://tickets.com/gig2' },
-    { date: '2023-12-05', venue: 'Venue 3', ticketLink: 'https://tickets.com/gig3' }
+    { date: '2025-03-15', venue: 'TBA', ticketLink: '#' },
+    { date: '2023-05-04', venue: 'TBA', ticketLink: '#' },
+    { date: 'TBD', venue: 'AfterDARK #006', ticketLink: '#' }
 ];
 
 const gigsList = document.querySelector('.gigs-list');
@@ -97,14 +96,8 @@ gigs.forEach(gig => {
     const gigInfo = document.createElement('div');
     gigInfo.textContent = `${gig.date} - ${gig.venue}`;
 
-    const ticketIcon = document.createElement('img');
-    ticketIcon.src = 'ticket-icon.png';
-    ticketIcon.addEventListener('click', () => {
-        window.location.href = gig.ticketLink;
-    });
-
+   
     gigItem.appendChild(gigInfo);
-    gigItem.appendChild(ticketIcon);
     gigsList.appendChild(gigItem);
 });
 
