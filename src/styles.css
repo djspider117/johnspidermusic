@@ -407,3 +407,22 @@ h2 {
 .show {
     display: block;
 }
+
+.beatport-icon {
+    font-size: 2em;
+    color: #f0f0f0;
+}
+
+.beatport-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.beatport-icon img:hover {
+    transform: scale(1.1);
+}
+
+.beatport-icon img:active {
+    transform: scale(0.95);
+}
