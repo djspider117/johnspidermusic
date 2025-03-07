@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Artist Page</title>
+    <title>John Spider - Energy.Emotion.Music.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
@@ -14,12 +14,12 @@
     <!-- Top Menu -->
     <header>
         <nav>
-            <div class="logo">
+            <div id="logo" class="logo">
                 <img src="images/Logo-Flat-Small.png" alt="Main Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#gigs">Shows</a></li>
+                <li><a href="#shows">Shows</a></li>
                 <li><a href="#releases">Releases</a></li>
             </ul>
             <div class="menu-toggle" id="mobile-menu">
@@ -61,32 +61,56 @@
             </div>
         </span>
     </section>
-    
+
     <section id="about" class="about-section">
         <div class="about-content">
             <h2>About</h2>
             <div class="about-text">
                 <p>Ionut Popovici a.k.a JOHN SPIDER is a trance DJ and producer hailing from Iasi, Romania. He specializes in emotional vibes and outputs a variety of subgenres from deep/progressive trance to hard-hitting uplifting and psytrance.</p>
-    
+
                 <p>He started a weekly radio show that he named Spiders in the Mix in 2008 that eventually got featured on Trance.FM that ran for 177 episodes and ended in 2011 due to work commitments. After a long absence from the scene, in 2017 he restarted his old show with a unique style of seamlessly blending deep and progressive vibes with hammering trance sounds.</p>
-    
+
                 <p>As a producer he has released tracks and remixes under labels such as Alter Ego, Arkham Digital, Boomtic Records, Tuned:Flow, and Vibrate Audio.</p>
-    
-                <p>VOIDLOGIC is the new alias of Ionut Popovici, formerly known for his trance productions under John Spider. Now venturing into the realm of drum and bass, VOIDLOGIC brings a fresh, energetic approach to the genre, blending uplifting melodies with dancefloor-driven beats. His debut track, "Until You See the Sun," is an electrifying fusion of fast-paced rhythms and euphoric vibes, guaranteed to set the stage for his presence in the drum and bass scene.</p>
-    
+
                 <p>Having made his mark in trance with releases on labels like Alter Ego, Arkham, Boomtic Records, Tuned:FLOW, and Vibrate Audio, Ionut’s new project VOIDLOGIC explores a dynamic soundscape with a focus on high-energy, emotional drum and bass tracks.</p>
+
+                <!--<p>VOIDLOGIC is the new alias of Ionut Popovici, formerly known for his trance productions under John Spider. Now venturing into the realm of drum and bass, VOIDLOGIC brings a fresh, energetic approach to the genre, blending uplifting melodies with dancefloor-driven beats. His debut track, "Until You See the Sun," is an electrifying fusion of fast-paced rhythms and euphoric vibes, guaranteed to set the stage for his presence in the drum and bass scene.</p>-->
             </div>
         </div>
     </section>
-    
-    <!-- Gigs Section -->
-    <section id="gigs" class="gigs-section">
-        <h2>Gigs</h2>
-        <div class="gigs-list">
-            <!-- JavaScript will populate this -->
+
+    <section id="shows" class="shows-section">
+        <h2>Shows</h2>
+        <video autoplay muted loop>
+            <source src="videos/shows.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <div class="pattern-layer"></div>
+        <div class="shows-container">
+            <!-- Template for a show entry -->
+            <template id="show-template">
+                <a href="#" class="show-link">
+                    <div class="top-line"></div>
+                    <div class="show-details">
+                        <div class="date-column">
+                            <div class="day"></div>
+                            <div class="month-year"></div>
+                        </div>
+                        <div class="info-column">
+                            <div class="title"></div>
+                            <div class="details1"></div>
+                            <div class="details2"></div>
+                        </div>
+                        <div class="poster-column">
+                            <img src="" alt="Event Poster" class="poster">
+                        </div>
+                    </div>
+                </a>
+            </template>
         </div>
     </section>
-    
+
     <section id="releases" class="releases-section">
         <h2>Releases</h2>
         <!-- Cover List -->
@@ -142,8 +166,10 @@
             &copy; 2025 John Spider. All Rights Reserved.
         </div>
     </footer>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <script src="script.js"></script>
+    <script src="shows.js"></script>
+    <script src="releases.js"></script>
 </body>
 </html>
