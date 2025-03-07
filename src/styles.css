@@ -151,7 +151,7 @@ h2 {
     padding: 20px;
     text-align: center;
     color: white;
-    background-image: url('images/video-alternate.jpg');
+    background-image: url('images/video-alternate.webp');
     background-size: cover;
     background-position: center;
 }
@@ -436,7 +436,7 @@ footer {
     min-height: 100vh; /* Full viewport height */
     height: 100%;
 
-    background-image: url('images/banner_no_logo.jpg');
+    background-image: url('images/banner_no_logo.webp');
     background-size: cover;
     background-position: center;
 }
@@ -448,7 +448,7 @@ footer {
     align-items: center;
     min-height: 100vh; /* Full viewport height */
     height: 100%;
-    background-image: url('images/voidlogic/banner_no_logo.jpg');
+    background-image: url('images/voidlogic/banner_no_logo.webp');
     background-size: cover;
     background-position: center;
 }
