@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VØIDLOGIC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/voidlogic/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/voidlogic/favicon.svg" />
+    <link rel="shortcut icon" href="images/voidlogic/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/voidlogic/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="VOIDLOGIC" />
+    <link rel="manifest" href="images/voidlogic/site.webmanifest" />
+</head>
+<body>
+    <!-- Top Menu -->
+    <header>
+        <nav>
+            <div id="logo" class="logo">
+                <img src="images/voidlogic/Logo-Flat-Small.png" alt="Main Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">John Spider</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shows">Shows</a></li>
+                <li><a href="#releases">Releases</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="main-section">
+        <div class="video-wrapper">
+            <video autoplay muted loop id="bg-video">
+                <source src="videos/voidlogic/main2.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div class="pattern-layer"></div>
+        <span>
+            <div class="main-logo">
+                <img src="images/voidlogic/logo-main.png" alt="Main Logo">
+            </div>
+            <div class="socials">
+                <a href="https://www.facebook.com/djjspider" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://soundcloud.com/johnspidermusic" target="_blank">
+                    <i class="fab fa-soundcloud"></i>
+                </a>
+                <a href="https://www.beatport.com/artist/john-spider/769557" target="_blank" class="beatport-icon">
+                    <img src="https://support.beatport.com/hc/en-us/article_attachments/20473898782484" alt="Beatport">
+                </a>
+                <a href="https://www.youtube.com/@johnspider" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/johnspidermusic/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </span>
+    </section>
+
+    <section id="about" class="about-section-void">
+        <div class="about-content-void">
+            <h2>About</h2>
+            <div class="about-text">
+                <p>VOIDLOGIC is the new alias of Ionut Popovici, formerly known for his trance productions under John Spider.</p>
+                <p>Now venturing into the realm of drum and bass, VOIDLOGIC brings a fresh, energetic approach to the genre, blending uplifting melodies with dancefloor-driven beats. His debut track, "Until You See the Sun," is an electrifying fusion of fast-paced rhythms and euphoric vibes, guaranteed to set the stage for his presence in the drum and bass scene.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="shows" class="shows-section">
+        <h2>Shows</h2>
+        <video autoplay muted loop>
+            <source src="videos/shows.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <div class="pattern-layer"></div>
+        <div class="shows-container">
+            <!-- Template for a show entry -->
+            <template id="show-template">
+                <a href="#" class="show-link">
+                    <div class="top-line"></div>
+                    <div class="show-details">
+                        <div class="date-column">
+                            <div class="day"></div>
+                            <div class="month-year"></div>
+                        </div>
+                        <div class="info-column">
+                            <div class="title"></div>
+                            <div class="details1"></div>
+                            <div class="details2"></div>
+                        </div>
+                        <div class="poster-column">
+                            <img src="" alt="Event Poster" class="poster">
+                        </div>
+                    </div>
+                </a>
+            </template>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <button id="back-to-top" class="back-to-top" onclick="topFunction()">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/djjspider" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://soundcloud.com/johnspidermusic" target="_blank">
+                <i class="fab fa-soundcloud"></i>
+            </a>
+            <a href="https://www.beatport.com/artist/john-spider/769557" target="_blank" class="beatport-icon">
+                <img src="https://support.beatport.com/hc/en-us/article_attachments/20473898782484" alt="Beatport">
+            </a>
+            <a href="https://www.youtube.com/@johnspider" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/johnspidermusic/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 VOIDLOGIC. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="script.js"></script>
+    <script src="shows.js"></script>
+    <script src="releases.js"></script>
+</body>
+</html>

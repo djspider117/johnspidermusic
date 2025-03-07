@@ -10,7 +10,7 @@
     },
     {
         date: "2025-03-15",
-        title: "TBA",
+        title: "TBA [as John Spider]",
         venue: "Underground Pub",
         city: "Iasi",
         address: "Galeria Stefan Cel Mare, Bulevardul Ștefan cel Mare și Sfânt",
@@ -19,7 +19,7 @@
     },
     {
         date: "2025-04-05",
-        title: "TBA",
+        title: "TBA [as VOIDLOGIC]",
         venue: "Underground Pub",
         city: "Iasi",
         address: "Galeria Stefan Cel Mare, Bulevardul Ștefan cel Mare și Sfânt",
