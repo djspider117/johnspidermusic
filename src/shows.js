@@ -6,7 +6,7 @@
         city: "Iasi",
         address: "Galeria Stefan Cel Mare, Bulevardul Ștefan cel Mare și Sfânt",
         poster: "https://scontent.fias1-1.fna.fbcdn.net/v/t39.30808-6/480551901_661012209776885_3765827168475767186_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=wjaya9uQ_pkQ7kNvgE_h07L&_nc_oc=Adhx3z5unNOTML3T8QrF4CSQ-Y7h3zcUyDkBW1WUV_PRZX7JoKmbiMgX4UDoj0KgY-g&_nc_zt=23&_nc_ht=scontent.fias1-1.fna&_nc_gid=ANJUKFXw9K2kgWbPj9zlzxt&oh=00_AYGHm9v3jXQRj5Liv7OvBFtgalOEO9aZ0AARLQ7cL98EzA&oe=67D06BF9",
-        ticketLink: "#"
+        ticketLink: "https://www.livetickets.ro/bilete/fk-it-i-lied-its-rumbass-360-edition-2"
     },
     {
         date: "2025-03-15",
